@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List App - LocalStorage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>My Tasks</h1>
+      <p>Stay organized and productive</p>
+    </div>
+    
+    <div class="add-task">
+      <input type="text" class="task-input" placeholder="What needs to be done?" id="taskInput">
+      <button class="add-btn" onclick="addTask()">Add</button>
+    </div>
+    
+    <div class="tasks-container" id="tasksContainer">
+      <div class="empty-state">
+        <div class="empty-state-icon">📝</div>
+        <h3>No tasks yet</h3>
+        <p>Add your first task above to get started on your productive journey!</p>
+      </div>
+    </div>
+    
+    <div class="task-stats" id="taskStats" style="display: none;">
+      <div class="stat-item">
+        <div class="stat-number" id="totalCount">0</div>
+        <div>Total</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" id="completedCount">0</div>
+        <div>Completed</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" id="pendingCount">0</div>
+        <div>Pending</div>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
