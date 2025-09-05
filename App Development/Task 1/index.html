@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auth Portal - Enter the Future</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-animation"></div>
+  
+  <div class="auth-container">
+    <div class="form-indicator"></div>
+    
+    <div class="auth-header">
+      <h1 id="auth-title" class="neon-text">Welcome Back</h1>
+      <p id="auth-subtitle">Enter the digital realm</p>
+    </div>
+
+    <div class="auth-forms">
+      <div class="success-message" id="success-message"></div>
+
+      <div class="form-container">
+        <!-- Login Form -->
+        <form class="form active" id="login-form">
+          <div class="form-group">
+            <label for="login-email">✉️ Email or Username</label>
+            <input type="text" id="login-email" name="email" placeholder="Enter your credentials" required>
+            <div class="input-glow"></div>
+            <div class="error-message" id="login-email-error"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="login-password">🔐 Password</label>
+            <input type="password" id="login-password" name="password" placeholder="Enter your secret key" required>
+            <div class="input-glow"></div>
+            <div class="error-message" id="login-password-error"></div>
+          </div>
+
+          <button type="submit" class="submit-btn" id="login-btn">🚀 Launch Session</button>
+
+          <div class="switch-form">
+            <p>New to our universe? <span class="switch-btn" onclick="switchToSignup()">Create Portal</span></p>
+          </div>
+        </form>
+
+        <!-- Signup Form -->
+        <form class="form" id="signup-form">
+          <div class="form-group">
+            <label for="signup-name">👤 Full Name</label>
+            <input type="text" id="signup-name" name="name" placeholder="Your cosmic identity" required>
+            <div class="input-glow"></div>
+            <div class="error-message" id="signup-name-error"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="signup-email">✨ Email Address</label>
+            <input type="email" id="signup-email" name="email" placeholder="your.portal@universe.com" required>
+            <div class="input-glow"></div>
+            <div class="error-message" id="signup-email-error"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="signup-password">🛡️ Create Password</label>
+            <input type="password" id="signup-password" name="password" placeholder="Forge your secret key" required>
+            <div class="input-glow"></div>
+            <div class="password-strength" id="password-strength">
+              <div class="password-strength-bar" id="strength-bar"></div>
+            </div>
+            <div class="error-message" id="signup-password-error"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="signup-confirm-password">🔒 Confirm Password</label>
+            <input type="password" id="signup-confirm-password" name="confirm-password" placeholder="Verify your secret key" required>
+            <div class="input-glow"></div>
+            <div class="error-message" id="signup-confirm-error"></div>
+          </div>
+
+          <button type="submit" class="submit-btn" id="signup-btn">🌟 Create Portal</button>
+
+          <div class="switch-form">
+            <p>Already have a portal? <span class="switch-btn" onclick="switchToLogin()">Enter Realm</span></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
