@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URL Shortener</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🔗 URL Shortener</h1>
+    
+    <form id="urlForm">
+      <div class="input-group">
+        <label for="longUrl">Enter your long URL:</label>
+        <input 
+          type="url" 
+          id="longUrl" 
+          placeholder="https://example.com/very/long/url/here"
+          required
+        >
+      </div>
+      
+      <button type="submit" class="btn" id="shortenBtn">
+        Shorten URL
+      </button>
+    </form>
+
+    <div class="loading" id="loading">
+      <div class="spinner"></div>
+      <p>Shortening your URL...</p>
+    </div>
+
+    <div class="error" id="error"></div>
+
+    <div class="result" id="result">
+      <h3>✅ URL Shortened Successfully!</h3>
+      <div class="shortened-url" id="shortenedUrl"></div>
+      <button class="copy-btn" id="copyBtn" onclick="copyToClipboard()">
+        📋 Copy URL
+      </button>
+      
+      <div class="stats">
+        <div class="stat-item">
+          <div class="stat-label">Original Length</div>
+          <div class="stat-value" id="originalLength">0</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">Shortened Length</div>
+          <div class="stat-value" id="shortenedLength">0</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
