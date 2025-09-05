@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meme Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>🔥 Dynamic Meme Generator 🔥</h1>
+
+  <!-- Dropdown for meme templates -->
+  <div class="controls">
+    <label for="meme-select">Choose Meme Template:</label>
+    <select id="meme-select">
+      <option value="">-- Select a Template --</option>
+    </select>
+  </div>
+
+  <!-- Inputs for text -->
+  <div class="controls">
+    <input type="text" id="top-text" placeholder="Top text">
+    <input type="text" id="bottom-text" placeholder="Bottom text">
+    <button id="generate-btn">Generate Meme</button>
+    <button id="download-btn">Download Meme</button>
+  </div>
+
+  <!-- Generated meme -->
+  <div id="generated-meme">
+    <canvas id="meme-canvas"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
