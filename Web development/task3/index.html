@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌤️ Weather Forecast</h1>
+        </div>
+
+        <div class="search-container">
+            <form class="search-form" id="searchForm">
+                <input 
+                    type="text" 
+                    class="search-input" 
+                    id="locationInput" 
+                    placeholder="Enter city name (e.g., New York, London, Tokyo)"
+                    required
+                >
+                <button type="submit" class="search-btn" id="searchBtn">
+                    Search Weather
+                </button>
+            </form>
+            <button class="current-location-btn" id="currentLocationBtn">
+                📍 Use Current Location
+            </button>
+        </div>
+
+        <div id="loadingIndicator" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Fetching weather data...</p>
+        </div>
+
+        <div id="errorMessage" class="error-message hidden"></div>
+
+        <div id="weatherDisplay" class="hidden">
+            <div class="weather-card">
+                <div class="weather-header">
+                    <div class="location-info">
+                        <h2 id="locationName">-</h2>
+                        <p class="date-time" id="dateTime">-</p>
+                    </div>
+                    <img id="weatherIcon" class="weather-icon" src="" alt="Weather Icon">
+                </div>
+
+                <div class="current-weather">
+                    <div class="temp-display">
+                        <div class="temperature" id="temperature">-</div>
+                        <div class="description" id="weatherDescription">-</div>
+                    </div>
+                </div>
+
+                <div class="weather-details">
+                    <div class="detail-item">
+                        <div class="label">Feels Like</div>
+                        <div class="value" id="feelsLike">-</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="label">Humidity</div>
+                        <div class="value" id="humidity">-</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="label">Wind Speed</div>
+                        <div class="value" id="windSpeed">-</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="label">Pressure</div>
+                        <div class="value" id="pressure">-</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="label">Visibility</div>
+                        <div class="value" id="visibility">-</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="label">UV Index</div>
+                        <div class="value" id="uvIndex">-</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="forecast-section">
+                <h3>5-Day Forecast</h3>
+                <div class="forecast-grid" id="forecastGrid">
+                    <!-- Forecast items will be populated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
